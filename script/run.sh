@@ -1,11 +1,4 @@
-#!/bin/bash
-
-if [ ! -f "build/tests/training_main" ]; then 
-	echo "training_main not exists!"
-	
-	exit 0
-fi
-
-cd build/tests
-
-./training_main
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+./build/tests/training_main "$@"

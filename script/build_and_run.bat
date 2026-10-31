@@ -1,14 +1,6 @@
 @echo off
-pushd .
-
-call script\build.bat
-if %errorlevel% neq 0 (
-    echo There was an error during the build process.
-) else (
-    call script\run.bat
-    if %errorlevel% neq 0 (
-        echo There was an error running the application.
-    )
-)
-
-popd
+setlocal
+call "%~dp0build.bat"
+if errorlevel 1 exit /b 1
+call "%~dp0run.bat" %*
+exit /b %errorlevel%

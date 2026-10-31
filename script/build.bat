@@ -1,12 +1,12 @@
 @echo off
-pushd .
-
-if not exist build (
-     md build
-)
-
-cd build
-cmake -G"MinGW Makefiles" ..
-mingw32-make.exe
-
+setlocal
+pushd "%~dp0.."
+cmake -S . -B build -G "MinGW Makefiles"
+if errorlevel 1 goto failed
+cmake --build build --parallel
+if errorlevel 1 goto failed
 popd
+exit /b 0
+:failed
+popd
+exit /b 1

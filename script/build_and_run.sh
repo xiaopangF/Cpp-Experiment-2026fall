@@ -1,4 +1,4 @@
-#!/bin/bash
-
-bash script/build.sh
-bash script/run.sh
+#!/usr/bin/env bash
+set -euo pipefail
+bash "$(dirname "$0")/build.sh"
+bash "$(dirname "$0")/run.sh" "$@"

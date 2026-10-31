@@ -1,8 +1,5 @@
-#!/bin/bash
-
-bash script/clean.sh
-mkdir -p build
-
-cd build
-cmake -G"Unix Makefiles" ..
-make
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")/.."
+cmake -S . -B build
+cmake --build build --parallel
