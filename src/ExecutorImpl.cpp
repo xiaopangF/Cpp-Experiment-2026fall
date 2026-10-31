@@ -22,6 +22,15 @@ void ExecutorImpl::Execute(const std::string& commands) noexcept
                 case 'N': ++pose.y; break;
                 case 'S': --pose.y; break;
             }
+        } else if (command == 'L' || command == 'R') {
+            // Clockwise order makes either quarter turn an index shift.
+            constexpr char HEADINGS[] = {'N', 'E', 'S', 'W'};
+            int index = 0;
+            while (HEADINGS[index] != pose.heading) {
+                ++index;
+            }
+            const int offset = command == 'R' ? 1 : 3;
+            pose.heading = HEADINGS[(index + offset) % 4];
         }
     }
 }
