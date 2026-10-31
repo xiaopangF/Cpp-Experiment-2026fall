@@ -59,4 +59,68 @@ TEST(ExecutorTest, should_move_one_grid_when_facing_S)
     ExpectPose(Pose{3, -3, 'S'}, executor->Query());
 }
 
+TEST(ExecutorTest, should_face_N_after_L_when_facing_E)
+{
+    std::unique_ptr<Executor> executor(Executor::NewExecutor({3, -2, 'E'}));
+    ASSERT_NE(nullptr, executor);
+    executor->Execute("L");
+    ExpectPose(Pose{3, -2, 'N'}, executor->Query());
+}
+
+TEST(ExecutorTest, should_face_S_after_L_when_facing_W)
+{
+    std::unique_ptr<Executor> executor(Executor::NewExecutor({3, -2, 'W'}));
+    ASSERT_NE(nullptr, executor);
+    executor->Execute("L");
+    ExpectPose(Pose{3, -2, 'S'}, executor->Query());
+}
+
+TEST(ExecutorTest, should_face_W_after_L_when_facing_N)
+{
+    std::unique_ptr<Executor> executor(Executor::NewExecutor({3, -2, 'N'}));
+    ASSERT_NE(nullptr, executor);
+    executor->Execute("L");
+    ExpectPose(Pose{3, -2, 'W'}, executor->Query());
+}
+
+TEST(ExecutorTest, should_face_E_after_L_when_facing_S)
+{
+    std::unique_ptr<Executor> executor(Executor::NewExecutor({3, -2, 'S'}));
+    ASSERT_NE(nullptr, executor);
+    executor->Execute("L");
+    ExpectPose(Pose{3, -2, 'E'}, executor->Query());
+}
+
+TEST(ExecutorTest, should_face_S_after_R_when_facing_E)
+{
+    std::unique_ptr<Executor> executor(Executor::NewExecutor({3, -2, 'E'}));
+    ASSERT_NE(nullptr, executor);
+    executor->Execute("R");
+    ExpectPose(Pose{3, -2, 'S'}, executor->Query());
+}
+
+TEST(ExecutorTest, should_face_N_after_R_when_facing_W)
+{
+    std::unique_ptr<Executor> executor(Executor::NewExecutor({3, -2, 'W'}));
+    ASSERT_NE(nullptr, executor);
+    executor->Execute("R");
+    ExpectPose(Pose{3, -2, 'N'}, executor->Query());
+}
+
+TEST(ExecutorTest, should_face_E_after_R_when_facing_N)
+{
+    std::unique_ptr<Executor> executor(Executor::NewExecutor({3, -2, 'N'}));
+    ASSERT_NE(nullptr, executor);
+    executor->Execute("R");
+    ExpectPose(Pose{3, -2, 'E'}, executor->Query());
+}
+
+TEST(ExecutorTest, should_face_W_after_R_when_facing_S)
+{
+    std::unique_ptr<Executor> executor(Executor::NewExecutor({3, -2, 'S'}));
+    ASSERT_NE(nullptr, executor);
+    executor->Execute("R");
+    ExpectPose(Pose{3, -2, 'W'}, executor->Query());
+}
+
 }  // namespace adas
