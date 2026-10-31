@@ -123,4 +123,75 @@ TEST(ExecutorTest, should_face_W_after_R_when_facing_S)
     ExpectPose(Pose{3, -2, 'W'}, executor->Query());
 }
 
+TEST(ExecutorTest, should_keep_pose_for_empty_commands)
+{
+    std::unique_ptr<Executor> executor(Executor::NewExecutor({3, -2, 'W'}));
+    ASSERT_NE(nullptr, executor);
+    executor->Execute("");
+    ExpectPose(Pose{3, -2, 'W'}, executor->Query());
+}
+
+TEST(ExecutorTest, should_follow_the_lecture_command_sequence)
+{
+    std::unique_ptr<Executor> executor(Executor::NewExecutor());
+    ASSERT_NE(nullptr, executor);
+    executor->Execute("MLMMRM");
+    ExpectPose(Pose{-2, 2, 'N'}, executor->Query());
+}
+
+TEST(ExecutorTest, should_move_repeatedly)
+{
+    std::unique_ptr<Executor> executor(Executor::NewExecutor({3, -2, 'S'}));
+    ASSERT_NE(nullptr, executor);
+    executor->Execute("MMM");
+    ExpectPose(Pose{3, -5, 'S'}, executor->Query());
+}
+
+TEST(ExecutorTest, should_return_to_heading_after_four_left_turns)
+{
+    std::unique_ptr<Executor> executor(Executor::NewExecutor({3, -2, 'E'}));
+    ASSERT_NE(nullptr, executor);
+    executor->Execute("LLLL");
+    ExpectPose(Pose{3, -2, 'E'}, executor->Query());
+}
+
+TEST(ExecutorTest, should_return_to_heading_after_four_right_turns)
+{
+    std::unique_ptr<Executor> executor(Executor::NewExecutor({3, -2, 'W'}));
+    ASSERT_NE(nullptr, executor);
+    executor->Execute("RRRR");
+    ExpectPose(Pose{3, -2, 'W'}, executor->Query());
+}
+
+TEST(ExecutorTest, should_cancel_opposite_turns)
+{
+    std::unique_ptr<Executor> executor(Executor::NewExecutor({3, -2, 'S'}));
+    ASSERT_NE(nullptr, executor);
+    executor->Execute("LRRL");
+    ExpectPose(Pose{3, -2, 'S'}, executor->Query());
+}
+
+TEST(ExecutorTest, should_return_to_start_after_a_square)
+{
+    std::unique_ptr<Executor> executor(Executor::NewExecutor());
+    ASSERT_NE(nullptr, executor);
+    executor->Execute("MRMRMRMR");
+    ExpectPose(Pose{0, 0, 'N'}, executor->Query());
+}
+
+TEST(ExecutorTest, should_keep_state_across_calls_and_isolate_instances)
+{
+    std::unique_ptr<Executor> first(Executor::NewExecutor());
+    std::unique_ptr<Executor> second(Executor::NewExecutor({-3, 4, 'W'}));
+    ASSERT_NE(nullptr, first);
+    ASSERT_NE(nullptr, second);
+    first->Execute("M");
+    first->Execute("RM");
+    ExpectPose(Pose{1, 1, 'E'}, first->Query());
+    ExpectPose(Pose{-3, 4, 'W'}, second->Query());
+    const Executor& readOnly = *first;
+    ExpectPose(Pose{1, 1, 'E'}, readOnly.Query());
+    ExpectPose(Pose{1, 1, 'E'}, readOnly.Query());
+}
+
 }  // namespace adas
