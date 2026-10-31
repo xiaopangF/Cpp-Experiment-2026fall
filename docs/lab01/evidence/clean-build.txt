@@ -1,0 +1,99 @@
+-- The CXX compiler identification is GNU 16.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/msys64/ucrt64/bin/c++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Deprecation Warning at tests/googletest/CMakeLists.txt:4 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- The C compiler identification is GNU 16.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/msys64/ucrt64/bin/cc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+CMake Deprecation Warning at tests/googletest/googletest/CMakeLists.txt:49 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- Found Python: C:/msys64/ucrt64/bin/python3.14.exe (found version "3.14.7") found components: Interpreter
+-- Configuring done (11.0s)
+-- Generating done (0.4s)
+-- Build files have been written to: <workspace>/work/C-Experiment-2026fall/labs/lab01/build
+[ 12%] Building CXX object src/CMakeFiles/training.dir/ExecutorImpl.cpp.obj
+[ 25%] Building CXX object tests/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj
+[ 37%] Linking CXX static library libtraining.a
+[ 37%] Built target training
+[ 50%] Linking CXX static library ..\..\..\lib\libgtest.a
+[ 50%] Built target gtest
+[ 62%] Building CXX object tests/googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj
+[ 75%] Linking CXX static library ..\..\..\lib\libgtest_main.a
+[ 75%] Built target gtest_main
+[ 87%] Building CXX object tests/CMakeFiles/training_main.dir/ExecutorTest.cpp.obj
+[100%] Linking CXX executable training_main.exe
+[100%] Built target training_main
+Running main() from <workspace>\work\C-Experiment-2026fall\labs\lab01\tests\googletest\googletest\src\gtest_main.cc
+[==========] Running 22 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 22 tests from ExecutorTest
+[ RUN      ] ExecutorTest.should_return_init_pose_when_without_command
+[       OK ] ExecutorTest.should_return_init_pose_when_without_command (0 ms)
+[ RUN      ] ExecutorTest.should_return_default_pose_when_without_init_and_command
+[       OK ] ExecutorTest.should_return_default_pose_when_without_init_and_command (0 ms)
+[ RUN      ] ExecutorTest.should_move_one_grid_when_facing_E
+[       OK ] ExecutorTest.should_move_one_grid_when_facing_E (0 ms)
+[ RUN      ] ExecutorTest.should_move_one_grid_when_facing_W
+[       OK ] ExecutorTest.should_move_one_grid_when_facing_W (0 ms)
+[ RUN      ] ExecutorTest.should_move_one_grid_when_facing_N
+[       OK ] ExecutorTest.should_move_one_grid_when_facing_N (0 ms)
+[ RUN      ] ExecutorTest.should_move_one_grid_when_facing_S
+[       OK ] ExecutorTest.should_move_one_grid_when_facing_S (0 ms)
+[ RUN      ] ExecutorTest.should_face_N_after_L_when_facing_E
+[       OK ] ExecutorTest.should_face_N_after_L_when_facing_E (0 ms)
+[ RUN      ] ExecutorTest.should_face_S_after_L_when_facing_W
+[       OK ] ExecutorTest.should_face_S_after_L_when_facing_W (0 ms)
+[ RUN      ] ExecutorTest.should_face_W_after_L_when_facing_N
+[       OK ] ExecutorTest.should_face_W_after_L_when_facing_N (0 ms)
+[ RUN      ] ExecutorTest.should_face_E_after_L_when_facing_S
+[       OK ] ExecutorTest.should_face_E_after_L_when_facing_S (0 ms)
+[ RUN      ] ExecutorTest.should_face_S_after_R_when_facing_E
+[       OK ] ExecutorTest.should_face_S_after_R_when_facing_E (0 ms)
+[ RUN      ] ExecutorTest.should_face_N_after_R_when_facing_W
+[       OK ] ExecutorTest.should_face_N_after_R_when_facing_W (0 ms)
+[ RUN      ] ExecutorTest.should_face_E_after_R_when_facing_N
+[       OK ] ExecutorTest.should_face_E_after_R_when_facing_N (0 ms)
+[ RUN      ] ExecutorTest.should_face_W_after_R_when_facing_S
+[       OK ] ExecutorTest.should_face_W_after_R_when_facing_S (0 ms)
+[ RUN      ] ExecutorTest.should_keep_pose_for_empty_commands
+[       OK ] ExecutorTest.should_keep_pose_for_empty_commands (0 ms)
+[ RUN      ] ExecutorTest.should_follow_the_lecture_command_sequence
+[       OK ] ExecutorTest.should_follow_the_lecture_command_sequence (0 ms)
+[ RUN      ] ExecutorTest.should_move_repeatedly
+[       OK ] ExecutorTest.should_move_repeatedly (0 ms)
+[ RUN      ] ExecutorTest.should_return_to_heading_after_four_left_turns
+[       OK ] ExecutorTest.should_return_to_heading_after_four_left_turns (0 ms)
+[ RUN      ] ExecutorTest.should_return_to_heading_after_four_right_turns
+[       OK ] ExecutorTest.should_return_to_heading_after_four_right_turns (0 ms)
+[ RUN      ] ExecutorTest.should_cancel_opposite_turns
+[       OK ] ExecutorTest.should_cancel_opposite_turns (0 ms)
+[ RUN      ] ExecutorTest.should_return_to_start_after_a_square
+[       OK ] ExecutorTest.should_return_to_start_after_a_square (0 ms)
+[ RUN      ] ExecutorTest.should_keep_state_across_calls_and_isolate_instances
+[       OK ] ExecutorTest.should_keep_state_across_calls_and_isolate_instances (0 ms)
+[----------] 22 tests from ExecutorTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 22 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 22 tests.

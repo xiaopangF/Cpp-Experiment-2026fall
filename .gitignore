@@ -1,25 +1,42 @@
+# CMake build trees and generated files
+**/build/
+**/build-*/
+**/cmake-build-*/
+**/CMakeFiles/
+**/Testing/
 **/CMakeCache.txt
-**/CMakeFiles
 **/cmake_install.cmake
-**/MakeFile
-**/Testing
 **/CTestTestfile.cmake
-**/build
-**/.DS_Store
-**/.history
-**/*.a
-**/*.lib
-**/*.exe
-**/.*.swp
-**/.vscode/*
-src/main
-tags
-tests/googletest
+**/compile_commands.json
 
-cmake-build-debug
+# Compiler and linker outputs
+*.o
+*.obj
+*.a
+*.lib
+*.exe
+*.dll
+*.so
+*.dylib
+*.pdb
+*.ilk
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
+# Editors and operating systems
+.vscode/
+.idea/
+.history/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+~$*.doc*
+
+# Local scratch files and duplicate submission bundles
+/work/
+/outputs/
+/dist/
+*.zip
+*.7z
+__pycache__/
+*.pyc

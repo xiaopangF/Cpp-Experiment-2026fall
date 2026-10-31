@@ -1,38 +1,39 @@
-# 实验1 高质量编程基础
+# C++ 实验 2026 秋季
 
-实现 `adas::Executor`，支持默认或指定初始位姿、前进 `M`、左转 `L`、右转 `R`、连续指令和状态查询。接口与课件一致，坐标为 `std::int32_t`。按实验约束，调用者保证输入合法，且整个执行过程中坐标不溢出。
+本仓库保存 C++ 课程实验的源码、开发者测试、实验报告与验收材料。每个实验独立构建，按实验编号归档。
 
-## 构建运行
+| 实验 | 主题 | 源码与运行说明 | 报告与验收材料 |
+| --- | --- | --- | --- |
+| 实验1 | 高质量编程基础：车辆执行器 Executor | [labs/lab01](labs/lab01/) | [docs/lab01](docs/lab01/) |
 
-Windows 环境需要 CMake 3.10 或以上、支持 C++17 的 MinGW-w64，以及 `mingw32-make`，均需加入 PATH。在工程根目录的命令提示符中执行：
+## 目录
 
-```bat
-script\build_and_run.bat
+```text
+labs/
+  lab01/                  实验1的独立 CMake 工程
+    include/              对外接口
+    src/                  功能实现
+    tests/                GoogleTest 用例及随工程附带的框架
+    script/               Windows 与 Bash 构建运行脚本
+docs/
+  lab01/                  实验报告、截图与验证记录
 ```
 
-在 PowerShell 中执行：
+## 运行实验1
+
+Windows 需要支持 C++17 的 MinGW-w64、mingw32-make 和 CMake 3.10 或以上，均需加入 `PATH`。在仓库根目录打开 PowerShell：
 
 ```powershell
-.\script\build_and_run.bat
+.\labs\lab01\script\build_and_run.bat
 ```
 
-GoogleTest 1.12.1 已随工程保存在 `tests/googletest`，不需要在线下载。构建目录 `build` 会在首次运行时生成。
+也可以进入 [实验1工程目录](labs/lab01/) 后，按该目录的 README 运行。GoogleTest 1.12.1 已随源码保存，无需在线下载。
 
-## 验证
+实验1共 22 个测试，覆盖规定的 14 个基础场景与 8 个补充场景。已通过全量测试、22 项独立运行及 100 轮乱序重复验证；整理后重新构建验收。
 
-共 22 个测试，包括要求的 14 个基础场景和 8 个补充场景。每个用例创建自己的执行器，并断言完整的 x、y、heading。
+## 维护约定
 
-```bat
-script\run.bat --gtest_shuffle --gtest_repeat=100 --gtest_random_seed=2026
-script\run.bat --gtest_filter=ExecutorTest.should_move_one_grid_when_facing_E
-ctest --test-dir build --output-on-failure
-git log --oneline
-```
-
-已验证：22/22 用例通过；随机顺序重复 100 轮全部通过；22 个用例逐一在独立进程运行通过。CTest 将整个 GoogleTest 可执行程序注册为 1 项测试，程序内部包含 22 个用例。
-
-工厂返回的原始指针由调用者负责释放，建议用 `std::unique_ptr<adas::Executor>` 接管；内存分配失败时返回 `nullptr`。查询接口为 `const noexcept`，不会改变状态。
-
-Git 历史保留起始工程、构建修正、初始化测试与实现、前进测试与实现、转向测试与实现及补充测试，测试提交包含可编译的接口桩。报告和截图位于提交包根目录。工程不包含 `build`。
-
-若 CMake 对 GoogleTest 的最低兼容版本显示弃用提示，该提示来自原附带测试框架；本次构建与测试均通过。
+- 新实验放入 `labs/labXX/`，对应报告和必要验收材料放入 `docs/labXX/`，并更新上方索引。
+- 保留源码、构建说明和必要的测试依赖；构建产物、编辑器缓存、临时文件和重复提交压缩包由 `.gitignore` 排除。
+- 第三方 GoogleTest 位于各实验的 `tests/googletest/`，保留其原许可证与说明。
+- 保留测试先行的 Git 历史；最初开发提交的工程位于仓库根目录，整理提交将工程整体移入 `labs/lab01/`。

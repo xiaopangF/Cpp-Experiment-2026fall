@@ -1,0 +1,518 @@
+=== 01-init-red.txt ===
+Running main() from <workspace>\work\cpp-training\tests\googletest\googletest\src\gtest_main.cc
+
+[==========] Running 2 tests from 1 test suite.
+
+[----------] Global test environment set-up.
+
+[----------] 2 tests from ExecutorTest
+
+[ RUN      ] ExecutorTest.should_return_init_pose_when_without_command
+
+<workspace>\work\cpp-training\tests\ExecutorTest.cpp:10: Failure
+
+Expected equality of these values:
+
+  expected.x
+
+    Which is: 3
+
+  actual.x
+
+    Which is: 0
+
+<workspace>\work\cpp-training\tests\ExecutorTest.cpp:11: Failure
+
+Expected equality of these values:
+
+  expected.y
+
+    Which is: -2
+
+  actual.y
+
+    Which is: 0
+
+<workspace>\work\cpp-training\tests\ExecutorTest.cpp:12: Failure
+
+Expected equality of these values:
+
+  expected.heading
+
+    Which is: 'E' (69, 0x45)
+
+  actual.heading
+
+    Which is: 'N' (78, 0x4E)
+
+[  FAILED  ] ExecutorTest.should_return_init_pose_when_without_command (1 ms)
+
+[ RUN      ] ExecutorTest.should_return_default_pose_when_without_init_and_command
+
+[       OK ] ExecutorTest.should_return_default_pose_when_without_init_and_command (0 ms)
+
+[----------] 2 tests from ExecutorTest (1 ms total)
+
+
+
+[----------] Global test environment tear-down
+
+[==========] 2 tests from 1 test suite ran. (1 ms total)
+
+[  PASSED  ] 1 test.
+
+[  FAILED  ] 1 test, listed below:
+
+[  FAILED  ] ExecutorTest.should_return_init_pose_when_without_command
+
+
+
+ 1 FAILED TEST
+
+
+=== 02-init-green.txt ===
+Running main() from <workspace>\work\cpp-training\tests\googletest\googletest\src\gtest_main.cc
+
+[==========] Running 2 tests from 1 test suite.
+
+[----------] Global test environment set-up.
+
+[----------] 2 tests from ExecutorTest
+
+[ RUN      ] ExecutorTest.should_return_init_pose_when_without_command
+
+[       OK ] ExecutorTest.should_return_init_pose_when_without_command (0 ms)
+
+[ RUN      ] ExecutorTest.should_return_default_pose_when_without_init_and_command
+
+[       OK ] ExecutorTest.should_return_default_pose_when_without_init_and_command (0 ms)
+
+[----------] 2 tests from ExecutorTest (0 ms total)
+
+
+
+[----------] Global test environment tear-down
+
+[==========] 2 tests from 1 test suite ran. (0 ms total)
+
+[  PASSED  ] 2 tests.
+
+
+=== 03-move-red.txt ===
+Running main() from <workspace>\work\cpp-training\tests\googletest\googletest\src\gtest_main.cc
+
+[==========] Running 6 tests from 1 test suite.
+
+[----------] Global test environment set-up.
+
+[----------] 6 tests from ExecutorTest
+
+[ RUN      ] ExecutorTest.should_return_init_pose_when_without_command
+
+[       OK ] ExecutorTest.should_return_init_pose_when_without_command (0 ms)
+
+[ RUN      ] ExecutorTest.should_return_default_pose_when_without_init_and_command
+
+[       OK ] ExecutorTest.should_return_default_pose_when_without_init_and_command (0 ms)
+
+[ RUN      ] ExecutorTest.should_move_one_grid_when_facing_E
+
+<workspace>\work\cpp-training\tests\ExecutorTest.cpp:10: Failure
+
+Expected equality of these values:
+
+  expected.x
+
+    Which is: 4
+
+  actual.x
+
+    Which is: 3
+
+[  FAILED  ] ExecutorTest.should_move_one_grid_when_facing_E (0 ms)
+
+[ RUN      ] ExecutorTest.should_move_one_grid_when_facing_W
+
+<workspace>\work\cpp-training\tests\ExecutorTest.cpp:10: Failure
+
+Expected equality of these values:
+
+  expected.x
+
+    Which is: 2
+
+  actual.x
+
+    Which is: 3
+
+[  FAILED  ] ExecutorTest.should_move_one_grid_when_facing_W (0 ms)
+
+[ RUN      ] ExecutorTest.should_move_one_grid_when_facing_N
+
+<workspace>\work\cpp-training\tests\ExecutorTest.cpp:11: Failure
+
+Expected equality of these values:
+
+  expected.y
+
+    Which is: -1
+
+  actual.y
+
+    Which is: -2
+
+[  FAILED  ] ExecutorTest.should_move_one_grid_when_facing_N (0 ms)
+
+[ RUN      ] ExecutorTest.should_move_one_grid_when_facing_S
+
+<workspace>\work\cpp-training\tests\ExecutorTest.cpp:11: Failure
+
+Expected equality of these values:
+
+  expected.y
+
+    Which is: -3
+
+  actual.y
+
+    Which is: -2
+
+[  FAILED  ] ExecutorTest.should_move_one_grid_when_facing_S (0 ms)
+
+[----------] 6 tests from ExecutorTest (0 ms total)
+
+
+
+[----------] Global test environment tear-down
+
+[==========] 6 tests from 1 test suite ran. (0 ms total)
+
+[  PASSED  ] 2 tests.
+
+[  FAILED  ] 4 tests, listed below:
+
+[  FAILED  ] ExecutorTest.should_move_one_grid_when_facing_E
+
+[  FAILED  ] ExecutorTest.should_move_one_grid_when_facing_W
+
+[  FAILED  ] ExecutorTest.should_move_one_grid_when_facing_N
+
+[  FAILED  ] ExecutorTest.should_move_one_grid_when_facing_S
+
+
+
+ 4 FAILED TESTS
+
+
+=== 04-move-green.txt ===
+Running main() from <workspace>\work\cpp-training\tests\googletest\googletest\src\gtest_main.cc
+
+[==========] Running 6 tests from 1 test suite.
+
+[----------] Global test environment set-up.
+
+[----------] 6 tests from ExecutorTest
+
+[ RUN      ] ExecutorTest.should_return_init_pose_when_without_command
+
+[       OK ] ExecutorTest.should_return_init_pose_when_without_command (0 ms)
+
+[ RUN      ] ExecutorTest.should_return_default_pose_when_without_init_and_command
+
+[       OK ] ExecutorTest.should_return_default_pose_when_without_init_and_command (0 ms)
+
+[ RUN      ] ExecutorTest.should_move_one_grid_when_facing_E
+
+[       OK ] ExecutorTest.should_move_one_grid_when_facing_E (0 ms)
+
+[ RUN      ] ExecutorTest.should_move_one_grid_when_facing_W
+
+[       OK ] ExecutorTest.should_move_one_grid_when_facing_W (0 ms)
+
+[ RUN      ] ExecutorTest.should_move_one_grid_when_facing_N
+
+[       OK ] ExecutorTest.should_move_one_grid_when_facing_N (0 ms)
+
+[ RUN      ] ExecutorTest.should_move_one_grid_when_facing_S
+
+[       OK ] ExecutorTest.should_move_one_grid_when_facing_S (0 ms)
+
+[----------] 6 tests from ExecutorTest (0 ms total)
+
+
+
+[----------] Global test environment tear-down
+
+[==========] 6 tests from 1 test suite ran. (0 ms total)
+
+[  PASSED  ] 6 tests.
+
+
+=== 05-turn-red.txt ===
+Running main() from <workspace>\work\cpp-training\tests\googletest\googletest\src\gtest_main.cc
+
+[==========] Running 14 tests from 1 test suite.
+
+[----------] Global test environment set-up.
+
+[----------] 14 tests from ExecutorTest
+
+[ RUN      ] ExecutorTest.should_return_init_pose_when_without_command
+
+[       OK ] ExecutorTest.should_return_init_pose_when_without_command (0 ms)
+
+[ RUN      ] ExecutorTest.should_return_default_pose_when_without_init_and_command
+
+[       OK ] ExecutorTest.should_return_default_pose_when_without_init_and_command (0 ms)
+
+[ RUN      ] ExecutorTest.should_move_one_grid_when_facing_E
+
+[       OK ] ExecutorTest.should_move_one_grid_when_facing_E (0 ms)
+
+[ RUN      ] ExecutorTest.should_move_one_grid_when_facing_W
+
+[       OK ] ExecutorTest.should_move_one_grid_when_facing_W (0 ms)
+
+[ RUN      ] ExecutorTest.should_move_one_grid_when_facing_N
+
+[       OK ] ExecutorTest.should_move_one_grid_when_facing_N (0 ms)
+
+[ RUN      ] ExecutorTest.should_move_one_grid_when_facing_S
+
+[       OK ] ExecutorTest.should_move_one_grid_when_facing_S (0 ms)
+
+[ RUN      ] ExecutorTest.should_face_N_after_L_when_facing_E
+
+<workspace>\work\cpp-training\tests\ExecutorTest.cpp:12: Failure
+
+Expected equality of these values:
+
+  expected.heading
+
+    Which is: 'N' (78, 0x4E)
+
+  actual.heading
+
+    Which is: 'E' (69, 0x45)
+
+[  FAILED  ] ExecutorTest.should_face_N_after_L_when_facing_E (0 ms)
+
+[ RUN      ] ExecutorTest.should_face_S_after_L_when_facing_W
+
+<workspace>\work\cpp-training\tests\ExecutorTest.cpp:12: Failure
+
+Expected equality of these values:
+
+  expected.heading
+
+    Which is: 'S' (83, 0x53)
+
+  actual.heading
+
+    Which is: 'W' (87, 0x57)
+
+[  FAILED  ] ExecutorTest.should_face_S_after_L_when_facing_W (0 ms)
+
+[ RUN      ] ExecutorTest.should_face_W_after_L_when_facing_N
+
+<workspace>\work\cpp-training\tests\ExecutorTest.cpp:12: Failure
+
+Expected equality of these values:
+
+  expected.heading
+
+    Which is: 'W' (87, 0x57)
+
+  actual.heading
+
+    Which is: 'N' (78, 0x4E)
+
+[  FAILED  ] ExecutorTest.should_face_W_after_L_when_facing_N (0 ms)
+
+[ RUN      ] ExecutorTest.should_face_E_after_L_when_facing_S
+
+<workspace>\work\cpp-training\tests\ExecutorTest.cpp:12: Failure
+
+Expected equality of these values:
+
+  expected.heading
+
+    Which is: 'E' (69, 0x45)
+
+  actual.heading
+
+    Which is: 'S' (83, 0x53)
+
+[  FAILED  ] ExecutorTest.should_face_E_after_L_when_facing_S (0 ms)
+
+[ RUN      ] ExecutorTest.should_face_S_after_R_when_facing_E
+
+<workspace>\work\cpp-training\tests\ExecutorTest.cpp:12: Failure
+
+Expected equality of these values:
+
+  expected.heading
+
+    Which is: 'S' (83, 0x53)
+
+  actual.heading
+
+    Which is: 'E' (69, 0x45)
+
+[  FAILED  ] ExecutorTest.should_face_S_after_R_when_facing_E (0 ms)
+
+[ RUN      ] ExecutorTest.should_face_N_after_R_when_facing_W
+
+<workspace>\work\cpp-training\tests\ExecutorTest.cpp:12: Failure
+
+Expected equality of these values:
+
+  expected.heading
+
+    Which is: 'N' (78, 0x4E)
+
+  actual.heading
+
+    Which is: 'W' (87, 0x57)
+
+[  FAILED  ] ExecutorTest.should_face_N_after_R_when_facing_W (0 ms)
+
+[ RUN      ] ExecutorTest.should_face_E_after_R_when_facing_N
+
+<workspace>\work\cpp-training\tests\ExecutorTest.cpp:12: Failure
+
+Expected equality of these values:
+
+  expected.heading
+
+    Which is: 'E' (69, 0x45)
+
+  actual.heading
+
+    Which is: 'N' (78, 0x4E)
+
+[  FAILED  ] ExecutorTest.should_face_E_after_R_when_facing_N (0 ms)
+
+[ RUN      ] ExecutorTest.should_face_W_after_R_when_facing_S
+
+<workspace>\work\cpp-training\tests\ExecutorTest.cpp:12: Failure
+
+Expected equality of these values:
+
+  expected.heading
+
+    Which is: 'W' (87, 0x57)
+
+  actual.heading
+
+    Which is: 'S' (83, 0x53)
+
+[  FAILED  ] ExecutorTest.should_face_W_after_R_when_facing_S (0 ms)
+
+[----------] 14 tests from ExecutorTest (0 ms total)
+
+
+
+[----------] Global test environment tear-down
+
+[==========] 14 tests from 1 test suite ran. (0 ms total)
+
+[  PASSED  ] 6 tests.
+
+[  FAILED  ] 8 tests, listed below:
+
+[  FAILED  ] ExecutorTest.should_face_N_after_L_when_facing_E
+
+[  FAILED  ] ExecutorTest.should_face_S_after_L_when_facing_W
+
+[  FAILED  ] ExecutorTest.should_face_W_after_L_when_facing_N
+
+[  FAILED  ] ExecutorTest.should_face_E_after_L_when_facing_S
+
+[  FAILED  ] ExecutorTest.should_face_S_after_R_when_facing_E
+
+[  FAILED  ] ExecutorTest.should_face_N_after_R_when_facing_W
+
+[  FAILED  ] ExecutorTest.should_face_E_after_R_when_facing_N
+
+[  FAILED  ] ExecutorTest.should_face_W_after_R_when_facing_S
+
+
+
+ 8 FAILED TESTS
+
+
+=== 06-turn-green.txt ===
+Running main() from <workspace>\work\cpp-training\tests\googletest\googletest\src\gtest_main.cc
+
+[==========] Running 14 tests from 1 test suite.
+
+[----------] Global test environment set-up.
+
+[----------] 14 tests from ExecutorTest
+
+[ RUN      ] ExecutorTest.should_return_init_pose_when_without_command
+
+[       OK ] ExecutorTest.should_return_init_pose_when_without_command (0 ms)
+
+[ RUN      ] ExecutorTest.should_return_default_pose_when_without_init_and_command
+
+[       OK ] ExecutorTest.should_return_default_pose_when_without_init_and_command (0 ms)
+
+[ RUN      ] ExecutorTest.should_move_one_grid_when_facing_E
+
+[       OK ] ExecutorTest.should_move_one_grid_when_facing_E (0 ms)
+
+[ RUN      ] ExecutorTest.should_move_one_grid_when_facing_W
+
+[       OK ] ExecutorTest.should_move_one_grid_when_facing_W (0 ms)
+
+[ RUN      ] ExecutorTest.should_move_one_grid_when_facing_N
+
+[       OK ] ExecutorTest.should_move_one_grid_when_facing_N (0 ms)
+
+[ RUN      ] ExecutorTest.should_move_one_grid_when_facing_S
+
+[       OK ] ExecutorTest.should_move_one_grid_when_facing_S (0 ms)
+
+[ RUN      ] ExecutorTest.should_face_N_after_L_when_facing_E
+
+[       OK ] ExecutorTest.should_face_N_after_L_when_facing_E (0 ms)
+
+[ RUN      ] ExecutorTest.should_face_S_after_L_when_facing_W
+
+[       OK ] ExecutorTest.should_face_S_after_L_when_facing_W (0 ms)
+
+[ RUN      ] ExecutorTest.should_face_W_after_L_when_facing_N
+
+[       OK ] ExecutorTest.should_face_W_after_L_when_facing_N (0 ms)
+
+[ RUN      ] ExecutorTest.should_face_E_after_L_when_facing_S
+
+[       OK ] ExecutorTest.should_face_E_after_L_when_facing_S (0 ms)
+
+[ RUN      ] ExecutorTest.should_face_S_after_R_when_facing_E
+
+[       OK ] ExecutorTest.should_face_S_after_R_when_facing_E (0 ms)
+
+[ RUN      ] ExecutorTest.should_face_N_after_R_when_facing_W
+
+[       OK ] ExecutorTest.should_face_N_after_R_when_facing_W (0 ms)
+
+[ RUN      ] ExecutorTest.should_face_E_after_R_when_facing_N
+
+[       OK ] ExecutorTest.should_face_E_after_R_when_facing_N (0 ms)
+
+[ RUN      ] ExecutorTest.should_face_W_after_R_when_facing_S
+
+[       OK ] ExecutorTest.should_face_W_after_R_when_facing_S (0 ms)
+
+[----------] 14 tests from ExecutorTest (0 ms total)
+
+
+
+[----------] Global test environment tear-down
+
+[==========] 14 tests from 1 test suite ran. (0 ms total)
+
+[  PASSED  ] 14 tests.

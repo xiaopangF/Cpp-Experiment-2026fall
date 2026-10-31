@@ -1,0 +1,242 @@
+{
+  "tests": 22,
+  "failures": 0,
+  "disabled": 0,
+  "errors": 0,
+  "timestamp": "2026-10-31T10:44:41Z",
+  "time": "0s",
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "ExecutorTest",
+      "tests": 22,
+      "failures": 0,
+      "disabled": 0,
+      "errors": 0,
+      "timestamp": "2026-10-31T10:44:41Z",
+      "time": "0s",
+      "testsuite": [
+        {
+          "name": "should_return_init_pose_when_without_command",
+          "file": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-31\\an-zh\\work\\cpp-training\\tests\\ExecutorTest.cpp",
+          "line": 16,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-31T10:44:41Z",
+          "time": "0s",
+          "classname": "ExecutorTest"
+        },
+        {
+          "name": "should_return_default_pose_when_without_init_and_command",
+          "file": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-31\\an-zh\\work\\cpp-training\\tests\\ExecutorTest.cpp",
+          "line": 23,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-31T10:44:41Z",
+          "time": "0s",
+          "classname": "ExecutorTest"
+        },
+        {
+          "name": "should_move_one_grid_when_facing_E",
+          "file": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-31\\an-zh\\work\\cpp-training\\tests\\ExecutorTest.cpp",
+          "line": 30,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-31T10:44:41Z",
+          "time": "0s",
+          "classname": "ExecutorTest"
+        },
+        {
+          "name": "should_move_one_grid_when_facing_W",
+          "file": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-31\\an-zh\\work\\cpp-training\\tests\\ExecutorTest.cpp",
+          "line": 38,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-31T10:44:41Z",
+          "time": "0s",
+          "classname": "ExecutorTest"
+        },
+        {
+          "name": "should_move_one_grid_when_facing_N",
+          "file": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-31\\an-zh\\work\\cpp-training\\tests\\ExecutorTest.cpp",
+          "line": 46,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-31T10:44:41Z",
+          "time": "0s",
+          "classname": "ExecutorTest"
+        },
+        {
+          "name": "should_move_one_grid_when_facing_S",
+          "file": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-31\\an-zh\\work\\cpp-training\\tests\\ExecutorTest.cpp",
+          "line": 54,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-31T10:44:41Z",
+          "time": "0s",
+          "classname": "ExecutorTest"
+        },
+        {
+          "name": "should_face_N_after_L_when_facing_E",
+          "file": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-31\\an-zh\\work\\cpp-training\\tests\\ExecutorTest.cpp",
+          "line": 62,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-31T10:44:41Z",
+          "time": "0s",
+          "classname": "ExecutorTest"
+        },
+        {
+          "name": "should_face_S_after_L_when_facing_W",
+          "file": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-31\\an-zh\\work\\cpp-training\\tests\\ExecutorTest.cpp",
+          "line": 70,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-31T10:44:41Z",
+          "time": "0s",
+          "classname": "ExecutorTest"
+        },
+        {
+          "name": "should_face_W_after_L_when_facing_N",
+          "file": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-31\\an-zh\\work\\cpp-training\\tests\\ExecutorTest.cpp",
+          "line": 78,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-31T10:44:41Z",
+          "time": "0s",
+          "classname": "ExecutorTest"
+        },
+        {
+          "name": "should_face_E_after_L_when_facing_S",
+          "file": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-31\\an-zh\\work\\cpp-training\\tests\\ExecutorTest.cpp",
+          "line": 86,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-31T10:44:41Z",
+          "time": "0s",
+          "classname": "ExecutorTest"
+        },
+        {
+          "name": "should_face_S_after_R_when_facing_E",
+          "file": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-31\\an-zh\\work\\cpp-training\\tests\\ExecutorTest.cpp",
+          "line": 94,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-31T10:44:41Z",
+          "time": "0s",
+          "classname": "ExecutorTest"
+        },
+        {
+          "name": "should_face_N_after_R_when_facing_W",
+          "file": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-31\\an-zh\\work\\cpp-training\\tests\\ExecutorTest.cpp",
+          "line": 102,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-31T10:44:41Z",
+          "time": "0s",
+          "classname": "ExecutorTest"
+        },
+        {
+          "name": "should_face_E_after_R_when_facing_N",
+          "file": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-31\\an-zh\\work\\cpp-training\\tests\\ExecutorTest.cpp",
+          "line": 110,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-31T10:44:41Z",
+          "time": "0s",
+          "classname": "ExecutorTest"
+        },
+        {
+          "name": "should_face_W_after_R_when_facing_S",
+          "file": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-31\\an-zh\\work\\cpp-training\\tests\\ExecutorTest.cpp",
+          "line": 118,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-31T10:44:41Z",
+          "time": "0s",
+          "classname": "ExecutorTest"
+        },
+        {
+          "name": "should_keep_pose_for_empty_commands",
+          "file": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-31\\an-zh\\work\\cpp-training\\tests\\ExecutorTest.cpp",
+          "line": 126,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-31T10:44:41Z",
+          "time": "0s",
+          "classname": "ExecutorTest"
+        },
+        {
+          "name": "should_follow_the_lecture_command_sequence",
+          "file": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-31\\an-zh\\work\\cpp-training\\tests\\ExecutorTest.cpp",
+          "line": 134,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-31T10:44:41Z",
+          "time": "0s",
+          "classname": "ExecutorTest"
+        },
+        {
+          "name": "should_move_repeatedly",
+          "file": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-31\\an-zh\\work\\cpp-training\\tests\\ExecutorTest.cpp",
+          "line": 142,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-31T10:44:41Z",
+          "time": "0s",
+          "classname": "ExecutorTest"
+        },
+        {
+          "name": "should_return_to_heading_after_four_left_turns",
+          "file": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-31\\an-zh\\work\\cpp-training\\tests\\ExecutorTest.cpp",
+          "line": 150,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-31T10:44:41Z",
+          "time": "0s",
+          "classname": "ExecutorTest"
+        },
+        {
+          "name": "should_return_to_heading_after_four_right_turns",
+          "file": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-31\\an-zh\\work\\cpp-training\\tests\\ExecutorTest.cpp",
+          "line": 158,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-31T10:44:41Z",
+          "time": "0s",
+          "classname": "ExecutorTest"
+        },
+        {
+          "name": "should_cancel_opposite_turns",
+          "file": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-31\\an-zh\\work\\cpp-training\\tests\\ExecutorTest.cpp",
+          "line": 166,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-31T10:44:41Z",
+          "time": "0s",
+          "classname": "ExecutorTest"
+        },
+        {
+          "name": "should_return_to_start_after_a_square",
+          "file": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-31\\an-zh\\work\\cpp-training\\tests\\ExecutorTest.cpp",
+          "line": 174,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-31T10:44:41Z",
+          "time": "0s",
+          "classname": "ExecutorTest"
+        },
+        {
+          "name": "should_keep_state_across_calls_and_isolate_instances",
+          "file": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-10-31\\an-zh\\work\\cpp-training\\tests\\ExecutorTest.cpp",
+          "line": 182,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-31T10:44:41Z",
+          "time": "0s",
+          "classname": "ExecutorTest"
+        }
+      ]
+    }
+  ]
+}
