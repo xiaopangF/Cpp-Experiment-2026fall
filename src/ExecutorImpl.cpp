@@ -8,7 +8,7 @@ Executor* Executor::NewExecutor(const Pose& initialPose) noexcept
     return new (std::nothrow) ExecutorImpl(initialPose);
 }
 
-ExecutorImpl::ExecutorImpl(const Pose&) noexcept : pose{0, 0, 'N'}
+ExecutorImpl::ExecutorImpl(const Pose& initialPose) noexcept : pose(initialPose)
 {
 }
 
